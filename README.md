@@ -1,2 +1,7 @@
-# ExamSeatingArrangementSystem
-This Java code implements an Exam Seating System to generate seating arrangements for students based on their roll numbers, classes, and available seats. It ensures students are evenly distributed across rows and seats per class and displays the final seating arrangement.
+This Java code implements an Exam Seating System to manage the seating arrangements for students during exams. The system is designed to work with a given number of total students, available classes, and seats per class.
+
+The main class, "ExamSeatingSystem," contains data structures to store student information efficiently, such as an ArrayList to hold all students and three HashMaps to organize students by branch, semester, and year. The "addStudent" method adds a new student to the system and updates the corresponding maps for easy retrieval based on the student's branch, semester, and year.
+
+The core functionality of generating seating arrangements is implemented in the "generateSeatingArrangement" method. It checks if there are enough seats available for all students. If not, it displays an error message. Otherwise, it sorts the students by their roll numbers to ensure a consistent order. Then, it iterates through the sorted list of students, assigning them seat numbers and row numbers based on the available seats per class. The seating arrangement is displayed class-wise and seat-wise, showing the students assigned to each seat.
+
+The system aims to ensure fairness by distributing students across rows and seats as evenly as possible, providing a systematic seating arrangement for exams. However, it assumes that the total number of students does not exceed the total available seats in all classes. If the number of students exceeds the available seats, it will not be able to generate a valid seating arrangement, and an error message will be shown.
